@@ -82,6 +82,7 @@ const Home = () => {
           <ProjectCard item={card} key={card.id} />
           ))}
       </Slide>
+      
     </div>
   )
 }
