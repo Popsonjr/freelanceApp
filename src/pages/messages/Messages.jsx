@@ -1,83 +1,77 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import "./Orders.scss"
-const Orders = () => {
+import "./Messages.scss"
+const Messages = () => {
 
   const currentUser = {
     id: 1,
     username: "Popson Jr",
     isSeller: true
   } 
+
+  const message = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ratione numquam tempore lorem saghbeb reuhv erwuy uwe ewuy uewr yeu yeury`
+
   return (
-    <div className='orders'>
+    <div className='messages'>
       <div className="container">
         <div className="title">
-          <h1>Orders</h1>
+          <h1>Messages</h1>
          
         </div>
         <table>
           <tr>
-            <th>Image</th>
-            <th>Title</th>
-            <th>Price</th>
-            <th>{currentUser?.isSeller ? "Buyer" : "Seller"}</th>
-            <th>Contact</th>
+            <th>Buyer</th>
+            <th>Last Message</th>
+            <th>Date</th>
+            <th>Action</th>
           </tr>
-          <tr>
+          <tr className='active'>
+            <td>John Doe</td>
+            <td><Link className="link" to="/message/123">{message.substring(0,100)}...</Link></td>
+            <td>1 day ago</td>
             <td>
-              <img className='img' src="https://fiverr-res.cloudinary.com/t_gig_cards_web_x2,q_auto,f_auto/gigs/308814022/original/2aa6bf69c0accb5ba5791fb6689973136242d47b.jpg" alt="" />
-            </td>
-            <td>Gig1</td>
-            <td>88</td>
-            <td>123</td>
-            <td>
-              <img className='delete' src="img/message.png" alt="" />
+              <button>Mark as Read</button>
             </td>
           </tr>
-          <tr>
+          <tr className='active'>
+            <td>John Doe</td>
+            <td><Link className="link" to="/message/123">{message.substring(0,100)}...</Link></td>
+            <td>1 day ago</td>
             <td>
-              <img className='img' src="https://fiverr-res.cloudinary.com/t_gig_cards_web_x2,q_auto,f_auto/gigs/308814022/original/2aa6bf69c0accb5ba5791fb6689973136242d47b.jpg" alt="" />
-            </td>
-            <td>Gig1</td>
-            <td>88</td>
-            <td>123</td>
-            <td>
-              <img className='delete' src="img/message.png" alt="" />
+              <button>Mark as Read</button>
             </td>
           </tr>
           <tr>
-            <td>
-              <img className='img' src="https://fiverr-res.cloudinary.com/t_gig_cards_web_x2,q_auto,f_auto/gigs/308814022/original/2aa6bf69c0accb5ba5791fb6689973136242d47b.jpg" alt="" />
-            </td>
-            <td>Gig1</td>
-            <td>88</td>
-            <td>123</td>
-            <td>
-              <img className='delete' src="img/message.png" alt="" />
-            </td>
+            <td>John Doe</td>
+            <td><Link className="link" to="/message/123">{message.substring(0,100)}...</Link></td>
+            <td>1 day ago</td>
+            
           </tr>
           <tr>
-            <td>
-              <img className='img' src="https://fiverr-res.cloudinary.com/t_gig_cards_web_x2,q_auto,f_auto/gigs/308814022/original/2aa6bf69c0accb5ba5791fb6689973136242d47b.jpg" alt="" />
-            </td>
-            <td>Gig1</td>
-            <td>88</td>
-            <td>123</td>
-            <td>
-              <img className='delete' src="img/message.png" alt="" />
-            </td>
+            <td>John Doe</td>
+            <td><Link className="link" to="/message/123">{message.substring(0,100)}...</Link></td>
+            <td>1 day ago</td>
+            
           </tr>
           <tr>
-            <td>
-              <img className='img' src="https://fiverr-res.cloudinary.com/t_gig_cards_web_x2,q_auto,f_auto/gigs/308814022/original/2aa6bf69c0accb5ba5791fb6689973136242d47b.jpg" alt="" />
-            </td>
-            <td>Gig1</td>
-            <td>88</td>
-            <td>123</td>
-            <td>
-              <img className='delete' src="img/message.png" alt="" />
-            </td>
+            <td>John Doe</td>
+            <td><Link className="link" to="/message/123">{message.substring(0,100)}...</Link></td>
+            <td>1 day ago</td>
+            
           </tr>
+          <tr>
+            <td>John Doe</td>
+            <td><Link className="link" to="/message/123">{message.substring(0,100)}...</Link></td>
+            <td>1 day ago</td>
+            
+          </tr>
+          <tr>
+            <td>John Doe</td>
+            <td><Link className="link" to="/message/123">{message.substring(0,100)}...</Link></td>
+            <td>1 day ago</td>
+            
+          </tr>
+          
           
           
         </table>
@@ -86,4 +80,4 @@ const Orders = () => {
   )
 }
 
-export default Orders
+export default Messages
