@@ -57,9 +57,9 @@ const Navbar = () => {
                 <span>MeetUp Business</span>
                 <span>Explore</span>
                 <span>English</span>
-                {!currentUser && <span>Sign in</span> }
+                {!currentUser && <Link className='link' to="/login"><span>Sign in</span></Link> }
                 {!currentUser?.isSeller &&<span>Become a Seller</span>}
-                {!currentUser && <button>Join</button>}
+                {!currentUser && <Link to="/register" ><button>Join</button></Link>}
                 {currentUser && (
                     <div className='user' onClick={() => setOpen(!open)}>
                         <img src={currentUser.img || "/img/noavatar.jpg"} alt="" />
